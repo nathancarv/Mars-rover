@@ -41,4 +41,19 @@ function turnRight(rover){
 }
 function moveForward(rover){
   console.log("moveForward was called")
+  if(rover.direction === "N" && rover.y > 0){
+    rover.y += -1;
+  }
+  else if(rover.direction === "E" && rover.x < 10){
+    rover.x +=1;
+  }
+  else if(rover.direction === "S" && rover.y < 10){
+    rover.y +=1;
+  }
+  else if(rover.direction === "W" && rover.x > 0){
+    rover.x += -1;
+  }
+  else{
+    console.log ("out of bounds")
+  }
 }
