@@ -57,3 +57,18 @@ function moveForward(rover){
     console.log ("out of bounds")
   }
 }
+function command(str){
+  for(var i = 0; i < str.length; i++){
+    switch (str[i]){
+      case "f": 
+      moveForward();
+      break;
+      case "r":
+      turnRight();
+      break;
+      case "l":
+      turnLeft();
+      break;
+    }
+  }
+}
