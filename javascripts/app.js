@@ -4,6 +4,7 @@ var rover = {
   direction: "N",
   x: 0,
   y: 0,
+  travelLog: [],
 }
 // ======================
 function turnLeft(rover){
@@ -55,8 +56,9 @@ function moveForward(rover){
   }
   else{
     console.log ("out of bounds")
-  }
+  } 
 }
+rover.travelLog.push (rover.direction)
 function command(str){
   for(var i = 0; i < str.length; i++){
     switch (str[i]){
